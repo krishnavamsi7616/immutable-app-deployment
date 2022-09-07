@@ -11,7 +11,7 @@ data "terraform_remote_state" "mutable" {
   backend = "s3"
   config = {
     bucket = "terraform-kvbucket"
-    key    = "terraform/mutable/${var.ENV}/terraform.tfstate"
+    key    = "terraform/immutable/${var.ENV}/terraform.tfstate"
     region = "us-east-1"
   }
 }
